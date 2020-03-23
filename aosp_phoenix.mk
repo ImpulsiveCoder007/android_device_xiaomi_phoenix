@@ -12,10 +12,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/phoenix/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_phoenix
+PRODUCT_NAME := aosp_phoenix
 PRODUCT_DEVICE := phoenix
 PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := Redmi
@@ -33,3 +33,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="phoenix-user 10 QKQ1.190825.002 V11.0.9.0.QGHCNXM release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# PixelExperience Stuffs
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_WIFI_EXT := true
